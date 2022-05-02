@@ -3,7 +3,7 @@ import Config
 # Configure your database
 config :elixir_cloud_tags, ElixirCloudTags.Repo,
   username: "postgres",
-  password: "postgres",
+  password: "postgresql",
   hostname: "localhost",
   database: "elixir_cloud_tags_dev",
   stacktrace: true,
