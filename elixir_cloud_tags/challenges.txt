@@ -1,0 +1,4 @@
+- Read all unique email;
+- Send dayly report to all unique emails;
+- Save report in the database;
+- Search how to use fallback_controller with Elixir and Phoenix to error validation;
