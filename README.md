@@ -101,6 +101,7 @@ You can view the project layout through this [link](https://www.figma.com/file/K
 
 - Access backend folder;
 - Press `Ctrl + c` twice to stop the server;
+- Access elixir folder;
 - Execute `mix deps.get` to install dependencies;
 - Execute `mix ecto.create` to create a database;
 - Execute `mix ecto.migrate` to run migration;
