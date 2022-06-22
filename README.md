@@ -62,7 +62,50 @@ You can view the project layout through this [link](https://www.figma.com/file/K
 
 ## How to run
 
+### Server
 
+- Access backend folder;
+- Install dependencies with `npm install`;
+- Create file .env in the directory backend_node;
+- Insert `GITHUB_CLIENT_SECRET=` in the file backend_node\.env;
+- Insert `GITHUB_CLIENT_ID=` in the file backend_node\.env;
+- Insert `JWT_SECRET=892186d8310a0b40511c47f30d50a76b` in the file backend_node\.env;
+
+### Web Application
+
+- Create a new OAuth App in [GitHub](github.com/) with `Homepage URL: http://localhost:4000` and `Authorization callback URL: http://localhost:3000`;
+- Access backend folder;
+- Update value of parameter `GITHUB_CLIENT_ID=` with the new Client ID, the parameter is in the file backend_node\.env;
+- Update value of parameter `GITHUB_CLIENT_SECRET=` with the new Client secret, the parameter is in the file backend_node\.env;
+- Execute command `npm run dev`;
+- Access frontend folder;
+- Install dependencies with `npm install`;
+- Execute command `npm run dev`;
+
+### Mobile Application
+
+- Create a new OAuth App in [GitHub](github.com/) with `Homepage URL: https://auth.expo.io/@arthurtimoteo/mobile-reactnative` and `Authorization callback URL: https://auth.expo.io/@arthurtimoteo/mobile-reactnative`;
+- Access backend folder;
+- Press `Ctrl + c` twice to stop the server;
+- Update value of parameter `GITHUB_CLIENT_ID=` with the new Client ID, the parameter is in the file backend_node\.env;
+- Update value of parameter `GITHUB_CLIENT_SECRET=` with the new Client secret, the parameter is in the file backend_node\.env;
+- Execute command `npm run dev`;
+- Access mobile folder;
+- Install dependencies with `npm install`;
+- Update value of parameter `CLIENT_ID`  with the new Client ID, the parameter is in the file mobile_reactnative\src\hooks\auth.tsx;
+- Update value of parameter `baseURL` with `http://` ip of your machine `:4000`, the parameter is in the file mobile_reactnative\src\services\api.ts;
+- Execute command `expo start`;
+- To execute mobile aplication in the a physical cellphone install Expo Go or use a emulator;
+
+### Elixir
+
+- Access backend folder;
+- Press `Ctrl + c` twice to stop the server;
+- Execute `mix deps.get` to install dependencies;
+- Execute `mix ecto.create` to create a database;
+- Execute `mix ecto.migrate` to run migration;
+- Execute `mix phx.server` to start;
+- Insert some MESSAGES by `http://localhost:4000/api/message`;
 
 ## License
 
